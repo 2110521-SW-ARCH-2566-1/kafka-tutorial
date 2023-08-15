@@ -12,7 +12,7 @@ Building the docker-compose.yml file requires installing the [Docker engine](htt
 docker-compose up -d
 ```
 
-### Interacting with the Kafka container from you computer
+### Interacting with Kafka containers from you computer
 
 Checking docker containers currently run executes the following command:
 
@@ -23,7 +23,8 @@ docker-compose ps
 Creating a Kafka topic runs the following command:
 
 ```bash
-docker-compose exec kafka kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic hello-kafka
+docker-compose exec kafka kafka-topics.sh --create --bootstrap-server \
+    localhost:9092 --replication-factor 1 --partitions 1 --topic hello-kafka
 ```
 
 Listing Kafka topics runs the following command:
@@ -35,17 +36,19 @@ docker-compose exec kafka kafka-topics.sh --list --bootstrap-server localhost:90
 Sending messages to Kafka topics uses the following command:
 
 ```bash
-docker-compose exec kafka kafka-console-producer.sh --broker-list localhost:9092 --topic hello-kafka
+docker-compose exec kafka kafka-console-producer.sh --broker-list \
+  localhost:9092 --topic hello-kafka
 ```
 
 Consuming messages from Kafka topics runs the following command:
 
 ```bash
-docker-compose exec kafka kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-kafka --from-beginning
+docker-compose exec kafka kafka-console-consumer.sh --bootstrap-server \
+  localhost:9092 --topic hello-kafka --from-beginning
 ```
 
 Stopping Kafka containers runs the following command:
 
 ```bash
-docker-compose down -d
+docker-compose down
 ```
