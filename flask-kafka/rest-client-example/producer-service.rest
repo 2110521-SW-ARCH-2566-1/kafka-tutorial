@@ -1,0 +1,13 @@
+## env dev 
+@apiUrl = http://localhost:8081
+
+POST {{ apiUrl }}/produce
+Content-Type: application/json 
+request-id: ref-no-{{$datetime iso8601}}
+transaction-date: {{$datetime iso8601}}
+
+{
+  "topic": "hello-kafka",
+  "message": "Neda"
+}
+###

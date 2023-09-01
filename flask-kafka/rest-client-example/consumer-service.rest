@@ -1,0 +1,15 @@
+## env dev 
+@apiUrl = http://localhost:8081
+
+POST {{ apiUrl }}/consume
+Content-Type: application/json 
+request-id: ref-no-{{$datetime iso8601}}
+transaction-date: {{$datetime iso8601}}
+
+{
+  "group_id": "mygroup",
+  "topics": [
+    "hello-kafka" 
+  ]
+}
+###
