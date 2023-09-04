@@ -1,5 +1,5 @@
 # docker-compose.yml
-version: "3.7"
+version: "3"
 services:
   zookeeper:
     restart: always
@@ -10,6 +10,9 @@ services:
       - "zookeeper-volume:/bitnami"
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - kafka-network
+
   kafka:
     restart: always
     image: docker.io/bitnami/kafka:3.3
@@ -27,6 +30,12 @@ services:
       - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=CLIENT
     depends_on:
       - zookeeper
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    name: custom_network
 volumes:
   kafka-volume:
   zookeeper-volume:
