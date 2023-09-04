@@ -42,7 +42,8 @@ class KafkaConnector:
       default_conf = {
         'bootstrap.servers': self.config.bootstrap_servers,
         'group.id': group_id,
-        'auto.offset.reset': self.config.auto_offset_reset
+        'auto.offset.reset': self.config.auto_offset_reset,
+        'enable.auto.commit': True
       }
 
       if conf:
@@ -57,7 +58,8 @@ class KafkaConnector:
     
     def consume(self, group_id: str, topics: List, timeout=10.0, conf: Optional[Dict] = None):
       consumer = self.__get_consumer(group_id, topics, conf)
-      msg = consumer.poll(timeout)
+      msg = consumer.poll(timeout) # Pull a message takes as much as 10 seconds
+      consumer.close() # Close the consumer 
       if msg is None:
         raise ServiceException('Error consuming a message that does not have a message part.')
       elif not msg.error():

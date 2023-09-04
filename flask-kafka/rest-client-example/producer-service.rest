@@ -8,6 +8,6 @@ transaction-date: {{$datetime iso8601}}
 
 {
   "topic": "hello-kafka",
-  "message": "Neda"
+  "message": "Neda2"
 }
 ###
