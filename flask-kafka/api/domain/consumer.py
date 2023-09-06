@@ -1,4 +1,4 @@
-from ast import Dict, List
+from typing import Dict, List
 
 """
 Author          : Neda Peyrone
@@ -9,7 +9,7 @@ Purpose         : -
 
 class Consumer(object):
     group_id: str
-    topics: List
+    topics: List[str] = []
     config: Dict
 
     def __init__(

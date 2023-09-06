@@ -1,4 +1,4 @@
-from ast import Dict
+from typing import Dict
 
 """
 Author          : Neda Peyrone
@@ -11,7 +11,7 @@ Purpose         : -
 class Producer(object):
     topic: str
     message: str
-    config: Dict
+    config: Dict[str, any] = {}
 
     def __init__(
       self,

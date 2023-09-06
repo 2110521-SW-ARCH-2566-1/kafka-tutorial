@@ -1,3 +1,4 @@
+from flasgger import swag_from
 from flask import request, Blueprint
 from marshmallow import ValidationError
 from api.domain.consumer import Consumer
@@ -17,6 +18,7 @@ Purpose         : -
 """
 
 
+@swag_from('../../docs/consume.yml')
 @consumer.route("/consume", methods=['POST'])
 def consume():
   payload = request.get_json()

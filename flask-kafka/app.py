@@ -1,6 +1,7 @@
 import sys
 from flask import Flask
 from pathlib import Path
+from flasgger import Swagger
 from api.bootstrap import Bootstrap
 
 from api.controller.consumer_controller import consumer
@@ -19,6 +20,21 @@ def create_app():
   Bootstrap(path)
 
   app = Flask(__name__)
+
+  template = {
+    "swagger": "2.0",
+    "info": {
+      "title": "Flask Kafka API",
+      "description": "This API was developed using Python Flask, which provides an interface for producing and consuming messages with Apache Kafka topics via HTTP endpoints.",
+      "version": "1.0"
+    }
+  }
+  app.config['SWAGGER'] = {
+    'title': 'Flask Kafka API',
+    'uiversion': 2,
+    'template': './resources/flasgger/swagger_ui.html'
+  }
+  Swagger(app, template=template)
 
   app.register_blueprint(consumer)
   app.register_blueprint(producer)

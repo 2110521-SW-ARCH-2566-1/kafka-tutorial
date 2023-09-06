@@ -1,0 +1,46 @@
+tags:
+  - Consumer
+parameters:
+  - in: "body"
+    name: "body"
+    description: "Consume a message from specific Kafka topics"
+    required: true
+    schema:
+      $ref: "#/definitions/ConsumerRequest"
+definitions:
+  ConsumerRequest:
+    type: "object"
+    properties:
+      group_id:
+        type: "string"
+        example: "mygroup"
+      topics:
+        type: "array"
+        items:
+          type: "string"
+        example: ["hello-kafka"]
+      config:
+        type: "object"
+        additionalProperties: {}
+        example: { "auto.offset.reset": "earliest" }
+  ConsumerResponse:
+    type: "object"
+    properties:
+      body:
+        type: "object"
+        example: "Hello World!"
+      statusResponse:
+        type: "object"
+        properties:
+          code:
+            type: "string"
+          desc:
+            type: "string"
+        example:
+          code: SUCCESS
+          desc: Service Success.
+responses:
+  200:
+    description: "Successful response"
+    schema:
+      $ref: "#/definitions/ConsumerResponse"
