@@ -8,7 +8,6 @@ services:
       dockerfile: ./docker/Dockerfile
       args:
         - HOST=kafka
-      network: host
     ports:
       - '8081:8081'
     networks:
