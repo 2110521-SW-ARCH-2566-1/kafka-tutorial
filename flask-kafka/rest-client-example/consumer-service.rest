@@ -2,9 +2,7 @@
 @apiUrl = http://localhost:8081
 
 POST {{ apiUrl }}/consume
-Content-Type: application/json 
-request-id: ref-no-{{$datetime iso8601}}
-transaction-date: {{$datetime iso8601}}
+Content-Type: application/json
 
 {
   "group_id": "mygroup",

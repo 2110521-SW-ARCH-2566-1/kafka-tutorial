@@ -2,12 +2,10 @@
 @apiUrl = http://localhost:8081
 
 POST {{ apiUrl }}/produce
-Content-Type: application/json 
-request-id: ref-no-{{$datetime iso8601}}
-transaction-date: {{$datetime iso8601}}
+Content-Type: application/json
 
 {
   "topic": "hello-kafka",
-  "message": "Neda2"
+  "message": "Hello Kafka!"
 }
 ###
