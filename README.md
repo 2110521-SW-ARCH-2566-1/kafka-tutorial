@@ -79,8 +79,8 @@ docker ps | grep -e kafka
 In addition, the flask-python project provides Swagger UI for testing interaction with Apache Kafka. To begin with, open the browser and type a URL [http://localhost:8081/apidocs](http://localhost:8081/apidocs).
 
 This API enables two services:
-* Consumer: This service allows retrieving a message from specific Kafka topics.
-* Producer: This service allows pushing a message from specific Kafka topics.
+* Consumer: This service allows retrieving a message from a specific Kafka topic.
+* Producer: This service allows pushing a message from a specific Kafka topic.
 <br /><br />
 
 ![](flask-kafka/resources/flasgger/01-swagger-ui.png)
