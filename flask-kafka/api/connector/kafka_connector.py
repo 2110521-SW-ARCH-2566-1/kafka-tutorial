@@ -56,8 +56,8 @@ class KafkaConnector:
       except KafkaException as err:
         raise ServiceException(f'Error while consuming message: "{err.args[0].str()}."')
     
-    def consume(self, group_id: str, topics: List, timeout=10.0, conf: Optional[Dict] = None):
-      consumer = self.__get_consumer(group_id, topics, conf)
+    def consume(self, group_id: str, topic: str, timeout=10.0, conf: Optional[Dict] = None):
+      consumer = self.__get_consumer(group_id, [topic], conf)
       msg = consumer.poll(timeout) # Pull a message takes as much as 10 seconds
       consumer.close() # Close the consumer 
       if msg is None:

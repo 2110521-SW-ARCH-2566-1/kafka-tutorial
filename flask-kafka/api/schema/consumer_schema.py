@@ -10,8 +10,5 @@ Purpose         : -
 
 class ConsumerSchema(Schema):
   group_id = fields.Str(required=True)
-  topics = fields.List(
-    fields.Str(),
-    required=True
-  )
+  topic = fields.Str(required=True)
   config = fields.Dict()

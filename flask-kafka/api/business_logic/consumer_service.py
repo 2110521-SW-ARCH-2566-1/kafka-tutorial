@@ -31,7 +31,7 @@ class ConsumerService:
     print(f'I:--START--:--{action}--')
 
     try:
-      msg = self.connector.consume(consumer.group_id, consumer.topics, conf=consumer.config)
+      msg = self.connector.consume(consumer.group_id, consumer.topic, conf=consumer.config)
       print(f'O:--SUCCESS--:--{action}--:msg/{msg}')
       return msg
     except Exception as err:

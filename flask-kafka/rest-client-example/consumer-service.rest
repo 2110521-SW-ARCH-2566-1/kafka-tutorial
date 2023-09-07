@@ -6,8 +6,6 @@ Content-Type: application/json
 
 {
   "group_id": "mygroup",
-  "topics": [
-    "hello-kafka" 
-  ]
+  "topic": "hello-kafka" 
 }
 ###

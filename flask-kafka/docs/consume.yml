@@ -3,7 +3,7 @@ tags:
 parameters:
   - in: "body"
     name: "body"
-    description: "Consume a message from specific Kafka topics"
+    description: "Consume a message from a specific Kafka topic"
     required: true
     schema:
       $ref: "#/definitions/ConsumerRequest"
@@ -14,11 +14,9 @@ definitions:
       group_id:
         type: "string"
         example: "mygroup"
-      topics:
-        type: "array"
-        items:
-          type: "string"
-        example: ["hello-kafka"]
+      topic:
+        type: "string"
+        example: "hello-kafka"
       config:
         type: "object"
         additionalProperties: {}

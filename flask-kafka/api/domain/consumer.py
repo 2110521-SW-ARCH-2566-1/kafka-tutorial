@@ -9,16 +9,16 @@ Purpose         : -
 
 class Consumer(object):
     group_id: str
-    topics: List[str] = []
+    topic: str
     config: Dict
 
     def __init__(
       self,
       group_id=None,
-      topics=None,
+      topic=None,
       config=None
     ):
       super(Consumer, self).__init__()
       self.group_id = group_id
-      self.topics = topics
+      self.topic = topic
       self.config = config

@@ -3,7 +3,7 @@ tags:
 parameters:
   - in: "body"
     name: "body"
-    description: "Produce a message from specific Kafka topics"
+    description: "Produce a message from a specific Kafka topic"
     required: true
     schema:
       id: Producer
