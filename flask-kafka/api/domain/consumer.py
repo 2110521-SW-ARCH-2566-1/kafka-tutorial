@@ -4,7 +4,8 @@ from typing import Dict, List
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : consumer.py
-Purpose         : -
+Purpose         : The Consumer class contains attributes essential for consuming 
+                  a message from a Kafka topic.
 """
 
 class Consumer(object):

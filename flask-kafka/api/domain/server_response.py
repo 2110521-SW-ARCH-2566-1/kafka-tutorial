@@ -4,7 +4,7 @@ from api.domain.status_response import StatusResponse
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : server_response.py
-Purpose         : -
+Purpose         : The ServerReponse class contains attributes essential for service responses.
 """
 
 

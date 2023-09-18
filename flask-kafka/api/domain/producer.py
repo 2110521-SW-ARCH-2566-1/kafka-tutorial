@@ -4,7 +4,8 @@ from typing import Dict
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : producer.py
-Purpose         : -
+Purpose         : The Producer class contains attributes essential for publishing 
+                  a message to a Kafka topic.
 """
 
 

@@ -5,7 +5,8 @@ from api.configuration.app_config import AppConfig
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : bootstrap.py
-Purpose         : -
+Purpose         : The Bootstrap class facilitates loading requisite parameters 
+                  from the YAML file configuration into its instance.
 """
 
 

@@ -4,7 +4,8 @@ from marshmallow import Schema, fields
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : producer_schema.py
-Purpose         : -
+Purpose         : The ProducerSchema class uses the Marshmallow library to 
+                  validate and transform an HTTP request into a producer instance.
 """
 
 

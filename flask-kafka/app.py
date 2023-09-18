@@ -11,7 +11,7 @@ from api.controller.producer_controller import producer
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : app.py
-Purpose         : -
+Purpose         : This Python file is used to establish a Flask application instance.
 """
 
 

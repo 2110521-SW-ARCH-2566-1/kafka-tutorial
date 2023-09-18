@@ -4,7 +4,7 @@ import yaml
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : file_util.py
-Purpose         : -
+Purpose         : This Python file includes utilities for managing files and directories.
 """
 
 

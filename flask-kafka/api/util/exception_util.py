@@ -7,7 +7,7 @@ from api.exception.service_exception import ServiceException
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : exception_util.py
-Purpose         : -
+Purpose         : This Python file contains error handling and reporting issues back to the client.
 """
 
 

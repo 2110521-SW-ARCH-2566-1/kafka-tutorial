@@ -9,7 +9,8 @@ from api.exception.service_exception import ServiceException
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : consumer_service.py
-Purpose         : -
+Purpose         : The ConsumerService class encapsulates the business logic necessary 
+                  for retrieving messages from a specified Kafka topic via the KafkaConnector class.
 """
 
 

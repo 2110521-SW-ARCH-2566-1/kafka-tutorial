@@ -2,7 +2,7 @@
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : kafka_config.py
-Purpose         : This Python file is used to contain the necessary parameters for connecting to Kafka.
+Purpose         : The KafkaConfig class encapsulates the necessary parameters for connecting to Apache Kafka.
 """
 
 

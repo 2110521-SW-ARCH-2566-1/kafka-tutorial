@@ -4,7 +4,8 @@ from marshmallow import Schema, fields
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : consumer_schema.py
-Purpose         : -
+Purpose         : The ConsumerSchema class uses the Marshmallow library to 
+                  validate and transform an HTTP request into a consumer instance.
 """
 
 

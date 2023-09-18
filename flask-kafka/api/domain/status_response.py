@@ -2,7 +2,7 @@
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : status_response.py
-Purpose         : -
+Purpose         : The StatusResponse class contains attributes essential for service statuses.
 """
 
 

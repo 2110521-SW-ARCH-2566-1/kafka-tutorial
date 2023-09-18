@@ -8,7 +8,7 @@ from datetime import datetime
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : json_util.py
-Purpose         : -
+Purpose         : This Python file contains utilities for serializing and converting to JSON format.
 """
 
 

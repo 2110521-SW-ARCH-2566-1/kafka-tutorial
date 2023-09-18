@@ -1,5 +1,4 @@
-import re
-from ast import Dict, List
+from ast import Dict
 from typing import Optional
 from api.configuration.kafka_config import KafkaConfig
 from confluent_kafka import Producer, Consumer, KafkaError, KafkaException
@@ -9,7 +8,8 @@ from api.exception.service_exception import ServiceException
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : kafka_connector.py
-Purpose         : -
+Purpose         : The KafkaConnector class facilitates Kafka connections 
+                  and offers essential functions, e.g., produce and consume.
 """
 
 

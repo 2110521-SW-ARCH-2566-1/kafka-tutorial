@@ -14,7 +14,9 @@ consumer = Blueprint('consumer', __name__)
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : consumer_controller.py
-Purpose         : -
+Purpose         : This Python file is responsible for controlling HTTP requests from clients. 
+                  It validates and transforms them into consumer instances before passing them 
+                  to the consumer service.
 """
 
 

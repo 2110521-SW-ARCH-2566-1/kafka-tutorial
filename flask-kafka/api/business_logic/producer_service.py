@@ -9,7 +9,8 @@ from api.exception.service_exception import ServiceException
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : producer_service.py
-Purpose         : -
+Purpose         : The ProducerService class encapsulates the business logic necessary 
+                  for pushing messages to a specified Kafka topic via the KafkaConnector class.
 """
 
 

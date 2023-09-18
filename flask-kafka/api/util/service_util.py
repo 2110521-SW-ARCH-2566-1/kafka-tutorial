@@ -7,7 +7,8 @@ from api.domain.server_response import ServerReponse
 Author          : Neda Peyrone
 Create Date     : 30-08-2023
 File            : service_util.py
-Purpose         : -
+Purpose         : This Python file contains utilities that help the conversion of parameters into the ServerResponse instance, 
+                  which is returned in HTTP response format.
 """
 
 
