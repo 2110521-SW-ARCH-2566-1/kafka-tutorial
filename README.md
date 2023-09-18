@@ -62,7 +62,7 @@ Building the docker-compose.yml file requires installing the [Docker engine](htt
 
 ### Installation
 * Clone this repository to create a local copy on your computer.
-* Open a terminal and `cd` to kafka-tutorial/kafka-python folder in which `docker-compose.yml` is saved and run:
+* Open a terminal and `cd` to kafka-tutorial/flask-kafka folder in which `docker-compose.yml` is saved and run:
 
 ```bash
 docker-compose up --build
