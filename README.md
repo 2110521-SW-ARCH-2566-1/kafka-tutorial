@@ -55,7 +55,7 @@ docker-compose down
 <br />
 
 # Building Python Flask to pull the live stream data from Apache Kafka
-The flask-python project was developed to publish and subscribe from Kafka topics by exposing services as REST-API. There are several Python libraries to interact with Kafka, e.g., [confluent-kafka](https://docs.confluent.io/kafka-clients/python/current/overview.html), [kafka-python](https://kafka-python.readthedocs.io/en/master/), [aiokafka](https://aiokafka.readthedocs.io/en/stable/). In this project, we used confluent-kafka, which provides the producer, consumer, and admin operations with a high-performance Python client for Apache Kafka.
+The flask-kafka project was developed to publish and subscribe from Kafka topics by exposing services as REST-API. There are several Python libraries to interact with Kafka, e.g., [confluent-kafka](https://docs.confluent.io/kafka-clients/python/current/overview.html), [kafka-python](https://kafka-python.readthedocs.io/en/master/), [aiokafka](https://aiokafka.readthedocs.io/en/stable/). In this project, we used confluent-kafka, which provides the producer, consumer, and admin operations with a high-performance Python client for Apache Kafka.
 
 ## Pre-requisites
 Building the docker-compose.yml file requires installing the [Docker engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
@@ -68,7 +68,7 @@ Building the docker-compose.yml file requires installing the [Docker engine](htt
 docker-compose up --build
 ```
 
-### Interacting with Kafka containers through the flask-python project
+### Interacting with Kafka containers through the flask-kafka project
 
 Checking docker containers currently run executes the following command:
 
@@ -76,11 +76,11 @@ Checking docker containers currently run executes the following command:
 docker ps | grep -e kafka
 ```
 
-In addition, the flask-python project provides Swagger UI for testing interaction with Apache Kafka. To begin with, open the browser and type a URL [http://localhost:8081/apidocs](http://localhost:8081/apidocs).
+In addition, the flask-kafka project provides Swagger UI for testing interaction with Apache Kafka. To begin with, open the browser and type a URL [http://localhost:8081/apidocs](http://localhost:8081/apidocs).
 
 This API enables two services:
 * Consumer: This service allows retrieving a message from a specific Kafka topic.
-* Producer: This service allows pushing a message from a specific Kafka topic.
+* Producer: This service allows pushing a message to a specific Kafka topic.
 <br /><br />
 
 ![](flask-kafka/resources/flasgger/01-swagger-ui.png)
