@@ -12,7 +12,7 @@ Building the docker-compose.yml file requires installing the [Docker engine](htt
 docker-compose up -d
 ```
 
-### Interacting with Kafka containers from you computer
+### Interacting with Kafka containers from your computer
 
 Checking docker containers currently run executes the following command:
 
